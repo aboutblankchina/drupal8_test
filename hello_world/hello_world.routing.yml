@@ -1,0 +1,13 @@
+helloWorldPage:
+  path: '/hello'
+  defaults:
+    _content: 'Drupal\hello_world\Controller\HelloWorldController::hello'
+  requirements:
+    _permission: 'access hello world'
+
+hello.edit:
+  path: '/hello/edit'
+  defaults:
+    _entity_form: 'hello.default'
+  requirements:
+    _permission: 'access hello world'  

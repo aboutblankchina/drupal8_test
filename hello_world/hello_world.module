@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * Implements hook_menu()
+ */
+function hello_world_menu() {
+  $items['hello'] = array(
+    'title' => 'Hello World',
+    'description' => "hello world page",
+    'route_name' => 'helloWorldPage', 
+    'type' => MENU_LOCAL_TASK,
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function hello_world_permission() {
+  return array(
+    'access hello world' => array(
+      'title' => t('Access hello world page'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_theme().
+ */
+function hello_world_theme() {
+  return array(
+    'hello_world_form' => array(
+      'render element' => 'form',
+      'template' => 'hello-world-form',
+    ),
+  );
+}

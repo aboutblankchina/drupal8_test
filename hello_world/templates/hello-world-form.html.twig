@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Two column template for the hello_world hello/edit form.
+ *
+ * This template will be used when a hello_world edit form specifies 'hello_world_form'
+ * as its #theme callback.  Otherwise, by default, node add/edit forms will be
+ * themed by theme_form().
+ *
+ * Available variables:
+ * - form: The hello_world hello/edit form.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% hide(form.actions) %}
+<div class="layout-node-form clearfix">
+
+  <div class="layout-region layout-region-node-secondary">
+    {{ form.title }}
+  </div>
+  <div class="layout-region layout-region-node-secondary">
+    {{ form}}
+  </div>  
+  <div class="layout-region layout-region-node-footer">
+    {{ form.actions }}
+  </div>
+</div>
